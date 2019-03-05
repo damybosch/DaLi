@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Hoi</h1>
+    <p>Dit word een nieuwe website</p>
 </body>
 </html>
