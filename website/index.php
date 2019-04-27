@@ -1,7 +1,7 @@
 <?php
     $projects = [
-        ["title"=>"Puur Haarle","excerpt"=>"Puur Haarle, een popkoor uit haarle","image"=>"puur.png","website"=>"https://www.puurhaarle.nl"],
-        ["title"=>"De Stobbenbroekies", "excerpt"=>"De Stobbenbroekies, een gastouderopvang", "image"=>"stobben.png", "website"=>"https://www.destobbenbroekies.nl"]
+        ["title"=>"Puur Haarle","excerpt"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione nulla exercitationem ipsa facere eum iusto in dignissimos quia incidunt ullam?","image"=>"puur.png","website"=>"https://www.puurhaarle.nl"],
+        ["title"=>"De Stobbenbroekies", "excerpt"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum inventore exercitationem, laboriosam odio nulla minus doloribus, aliquid suscipit cupiditate nisi, rerum eius facilis at tenetur aperiam corrupti ipsam dicta dolor.", "image"=>"stobben.png", "website"=>"https://www.destobbenbroekies.nl"]
     ];
     $count = 0;
 
@@ -19,6 +19,7 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -28,19 +29,28 @@
             <div class="site-branding">
                 <a>Damy Bosch</a>
             </div>
-            <div class="site-navigation"></div>
+            <div class="site-navigation">
+                <div class="darklight">
+                    <label  class="switch">
+                        <input id="themeSwitch" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
         </div>
     </header>
     <div class="teaser">
         <div class="container">
+            <div class="teaser__content">
             <div class="teaser__title">
                 <h1>Damy Bosch</h1>
-                <p>Front-end Developer</p>
+                <h3>Front-end Developer</h3>
             </div>
             <div class="teaser__cta">
-                <a href="#" class="btn">Contact</a><br>
-                <span class="betweenLines">of</span><br>
+                <a href="mailto:info@damybosch.nl" class="btn">Contact</a>
+                <span class=""> of  </span>
                 <a href="#" class="not-btn">Resumé</a>
+            </div>
             </div>
         </div>
         <div class="square"></div>
@@ -99,13 +109,15 @@
                     </div>
                     <div class="project__excerpt">
                         <p><?php echo $project['excerpt']; ?></p>
+                        <a class="btn" href="<?php echo $project['website']; ?>">Website</a>
+                    </div>
+                    <div class="project__count">
+                        <?php echo $count; ?>
                     </div>
                     </div>
                     <div class="project__image">
-                        <img src="images/project.jpg" alt="<?php echo $project['title']; ?>">
-                        <div class="project__count">
-                        <?php echo $count; ?>
-                    </div>
+                        <img src="images/<?php echo $project['image']; ?>" target="_blank" alt="<?php echo $project['title']; ?>">
+                        
                     </div>
                     
                 </div>
@@ -113,6 +125,12 @@
             </div>
         </div>
     </div>
+    <footer>
+        &copy; Damy Bosch 2019
+    </footer>
+
+
+    <script src="js/function.js"></script>
 </body>
 
 </html>
